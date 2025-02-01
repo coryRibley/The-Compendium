@@ -3,8 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static\Compendium-Logo.png">
     <title>The Cocktail Compendium</title>
     <style>
+        .header {
+            background-color: #dfa570;
+            text-align: center;
+            align-items: center;
+            display: flex;
+            padding: 20px;
+        }
+        .header h1 {
+            flex: 1;
+        }
+        #logo {
+            max-width: 300px;
+            max-height: 300px;
+        }
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -44,8 +59,8 @@
             margin-top: 20px;
         }
         .cocktail-gallery img {
-            width: 250px;
-            height: 250px;
+            max-width: 250px;
+            max-height: 250px;
             border-radius: 10px;
             object-fit: cover;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
@@ -53,18 +68,23 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to The Cocktail Lounge</h1>
-    <div class="search-bar">
-        <input type="text" placeholder="Search for a cocktail...">
-        <button>Search</button>
-    </div>
+    <header class="header">
+        <img src="static/Compendium-Logo.png" alt="logo" id="logo">
+        <h1>Welcome to The Compendium
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a cocktail...">
+                <button>Search</button>
+            </div>
+        </h1>
+    </header>
+    
     <div class="cocktail-gallery">
-        <img src="https://source.unsplash.com/250x250/?cocktail" alt="Cocktail 1">
-        <img src="https://source.unsplash.com/250x250/?drink" alt="Cocktail 2">
-        <img src="https://source.unsplash.com/250x250/?mojito" alt="Cocktail 3">
-        <img src="https://source.unsplash.com/250x250/?martini" alt="Cocktail 4">
-        <img src="https://source.unsplash.com/250x250/?margarita" alt="Cocktail 5">
-        <img src="https://source.unsplash.com/250x250/?whiskey" alt="Cocktail 6">
+        <img src="static\Drinks\Margarita.png" alt="Margarita">
+        <img src="static\Drinks\espresso-martini.jpg" alt="Espresso Martini">
+        <img src="static\Drinks\boulevardier.jpg" alt="Boulevardier">
+        <img src="static\Drinks\mai-tai.jpg" alt="Mai Tai">
+        <img src="static\Drinks\aviation.jpg" alt="Aviation">
+        <img src="static\Drinks\martini.jpg" alt="Martini">
     </div>
 </body>
 <div class="main-cont">
