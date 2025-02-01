@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/styles1.css" rel="stylesheet">
+    <title>Compendium - Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7d9aa;
+            background-image: url('https://source.unsplash.com/1600x900/?cocktail,bar');
+            background-size: cover;
+            background-position: center;
+        }
+        .register-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .register-container h2 {
+            margin-bottom: 20px;
+            font-family: 'Brush Script MT', cursive;
+            color: #d35400;
+        }
+        .register-container h5 {
+            margin-top: 20px;
+            color: #d35400;
+            text-decoration: none;
+        }
+        .register-container h5:hover {
+            text-decoration: underline;
+            color:#a04000;
+        }
+        .register-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #d35400;
+            border-radius: 5px;
+        }
+        .register-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d35400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .register-container button:hover {
+            background-color: #a04000;
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <img src="/static/Compendium-Logo.png" alt="logo" width="250px">
+        {% if message %}
+        <div class="error-element">
+            <img src="/static/warning.png" alt="warning" width="40px">
+            <p class="error-msg">{{ message }}</p>
+        </div>
+        {% endif %}
+        <form action="/register" method="POST">
+            <input type="text" name="username" placeholder="Choose Your Bartender Name">
+            <input type="email" name="email" placeholder="Enter Your Email">
+            <input type="password" name="password" placeholder="Create a Secret Recipe">
+            <input type="password" name="password" placeholder="Verify That Thing">
+            <button type="submit">Start Learning!</button>
+        </form>
+        <h5><a href="/login" type="link" style="text-decoration: none; color:#d35400">Already have an account?</a></h5>
+    </div>
+</body>
+</html>

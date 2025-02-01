@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cocktail Compendium</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f7d9aa;
+            background-image: url('https://source.unsplash.com/1600x900/?cocktail,bar');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .search-bar {
+            margin: 20px auto;
+            width: 50%;
+        }
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            border: 2px solid #d35400;
+            border-radius: 5px;
+        }
+        .search-bar button {
+            padding: 10px;
+            background-color: #d35400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-bar button:hover {
+            background-color: #a04000;
+        }
+        .cocktail-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .cocktail-gallery img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to The Cocktail Lounge</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for a cocktail...">
+        <button>Search</button>
+    </div>
+    <div class="cocktail-gallery">
+        <img src="https://source.unsplash.com/250x250/?cocktail" alt="Cocktail 1">
+        <img src="https://source.unsplash.com/250x250/?drink" alt="Cocktail 2">
+        <img src="https://source.unsplash.com/250x250/?mojito" alt="Cocktail 3">
+        <img src="https://source.unsplash.com/250x250/?martini" alt="Cocktail 4">
+        <img src="https://source.unsplash.com/250x250/?margarita" alt="Cocktail 5">
+        <img src="https://source.unsplash.com/250x250/?whiskey" alt="Cocktail 6">
+    </div>
+</body>
+<div class="main-cont">
+    <p class="poppins-bold">Welcome back!</p>
+    <p class="poppins-light">Logged in as {{ username }}. <a href="/logout" class="link">Logout.</a></p>
+    <p class="poppins-light"><a href="/deregister" class="link">Delete Account</a></p>
+</div>
+</html>
